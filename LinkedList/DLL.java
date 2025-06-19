@@ -97,6 +97,76 @@ public class DLL {
         }
     }
 
+    //delete head from DLL 
+    public void delbegnode(){
+
+        Node temp=head;
+        if(head==null){
+            System.out.println("List empty");
+        }
+        else{
+                head = head.next;
+                if (head != null) {
+                    head.back = null;
+                }
+        }
+    }
+
+    // delete node at the  end 
+    public void delnodeAtEnd(){
+     if(head == null){
+        System.out.println("List empty");
+        return;
+     }
+
+     if(head.next == null){
+        head = null;
+        return;
+     }
+
+     Node temp = head;
+     while(temp.next != null){
+        temp = temp.next;
+     }
+
+     temp.back.next = null;
+    }
+
+
+    //del at specific position
+    public void delatPos(int pos){
+     if(head == null){
+        System.out.println("List empty");
+        return;
+     }
+
+     if(pos == 1){
+        delbegnode();  // reuse karo
+        return;
+     }
+
+     Node temp = head;
+     int i = 1;
+     while(i < pos && temp != null){
+        temp = temp.next;
+        i++;
+     }
+
+     if(temp == null){
+        System.out.println("Position out of bounds");
+        return;
+     }
+
+     if(temp.next != null){
+        temp.next.back = temp.back;
+     }
+
+     if(temp.back != null){
+        temp.back.next = temp.next;
+     }
+    }
+
+
     // Main method
     public static void main(String[] args) {
         DLL list = new DLL();
