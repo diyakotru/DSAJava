@@ -54,8 +54,22 @@ public class basicStrings {
 
         //Strings immutable hoti hai agr amit ka amita karna hai toh str kei case mei new bnega 
         //Mutable string -> stringBuffer(safe) ||String Builder (multithreading mei not safe)
-        // toh mutable str same mei he changes kar deti hai 
-        
+        // toh mutable str same mei he changes kar deti hai \
+
+        // Part-3 
+        // concatenation +
+        // string kei dono side + ho toh + ho jata hai n entire cheez str mei convert ho jati hai 
+        System.out.println(9880+21+"Diya");// isme phele sum then diya add hota hai 
+        System.out.println("Diya"+562+90);//issme left se phele diya562 fir 90 join hota hai 
+
+        //string formating
+        double num=1345678.9876543;
+        System.out.println(num);
+        System.out.printf("Number is %.2f ",num);
+        String address="Delhi";
+        String naam=String.format("Number is %f address is %s", num,address);
+        System.out.println(naam);
+
 
         
 
