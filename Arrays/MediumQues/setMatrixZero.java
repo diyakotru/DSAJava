@@ -58,6 +58,33 @@ public class setMatrixZero {
             }
         }
     }
+    public void setZeroes2(int[][] matrix) {
+    int m = matrix.length;
+    int n = matrix[0].length;
+
+    boolean[] rows = new boolean[m];
+    boolean[] cols = new boolean[n];
+
+    // 1st pass - Mark
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            if (matrix[i][j] == 0) {
+                rows[i] = true;
+                cols[j] = true;
+            }
+        }
+    }
+
+    // 2nd pass - Set zeroes
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            if (rows[i] || cols[j]) {
+                matrix[i][j] = 0;
+            }
+        }
+    }
+}
+
 
     public static void main(String[] args) {
         int[][] matrix = {
