@@ -4,7 +4,7 @@ public class countNoOfDigit {
     public static void main(String[] args) {
         int n=675;
         int count=0;
-        //onr line no. of digits 
+        //one line no. of digits 
         System.out.println((int)Math.log10(n)+1);
         
         while(n!=0){

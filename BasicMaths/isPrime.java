@@ -37,7 +37,7 @@ public class isPrime {
         //Step 2-> for each prime element make its multiples false;
         for(int j=2;j<51;j++){
             if(resultArr[j]){
-                for(int p=j*2;p<51;p+=j){
+               for(int p=j*2;p<51;p+=j){
                     resultArr[p]=false;
                 }
             }
@@ -52,7 +52,11 @@ public class isPrime {
 
         // time complexity analysis : normal : o(n)
         // optimal takes o(nlog(log(n))) cuz 1/p=log(log(n))
+        // time complexity break down 
+        // hum hr element kei multiples ko ja rhe hai toh voh ho jayega n/p->1/p=log(logn)
+        // ->n/p=nlog(log(N))
        
         
     }
 }
+ 
