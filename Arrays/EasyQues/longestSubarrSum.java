@@ -23,7 +23,6 @@ public  class longestSubarrSum{
 
 
 
-        // optimal approach
         
         System.out.println(maxlen);
     }
