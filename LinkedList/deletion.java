@@ -20,7 +20,7 @@ public class deletion {
         head = head.next;
     }
 
-    // Delete node at the end
+    // Delete node at the end -> O(n)
     public void delNodeAtEnd() {
         if (head == null) {
             System.out.println("List is empty. Nothing to delete.");
